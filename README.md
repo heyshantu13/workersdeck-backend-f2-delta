@@ -77,7 +77,7 @@ Welcome! we hope you enjoy the site as much as we enjoyed making it.
 We tried to use a completely modern tech stack while testing out some new technologies that we had never used before. This resulted in a fast, performant, and easily-extensible web app that should be fairly future-proof for the coming next several years. We used:
 
 - [Node With Express JS](https://expressjs.com/)
-- [Sequelize](https://sequelize.org/master/)
+- [Sequelize](https://sequelize.org/)
 
 <br/>
 
