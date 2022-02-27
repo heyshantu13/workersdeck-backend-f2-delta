@@ -17,7 +17,7 @@ Welcome! we hope you enjoy the site as much as we enjoyed making it.
 
 # Table of Contents
 
-1. [Documantation](#Documantation)
+1. [API Documantation](#Documantation)
 2. [Installation](#installation)
 3. [Technology Stack](#technology-stack)
 4. [Authors](#authors)
@@ -27,7 +27,7 @@ Welcome! we hope you enjoy the site as much as we enjoyed making it.
 
 # Documantation
 
-[Documentation](https://documenter.getpostman.com/view/12791309/UVJYKz2U)
+[Open API Documentation](https://documenter.getpostman.com/view/12791309/UVJYKz2U)
 
 
 # Installation
