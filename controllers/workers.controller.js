@@ -59,6 +59,7 @@ const CreateService = async (req,res) => {
         subcategory_id: req.body.subcategory_id,
         servicable_city_id:req.body.city_id,
         servicable_pincode: req.body.servicable_pincode,
+        img: req.body.img,
         wid:WorkerId,
         createdAt: new Date(),
         updatedAt: new Date(),

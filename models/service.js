@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     servicable_pincode : DataTypes.CHAR,
     wid: DataTypes.INTEGER,
     status:DataTypes.CHAR(1),
+    service_image: DataTypes.STRING,
 
   }, {
     sequelize,
