@@ -102,10 +102,22 @@ const showWorkersLists =  async (req,res) => {
             servicable_pincode:pincode,
             category_id:category_id,
         }
-      }).then(result => {
-        if(result){
-            workers.result = result;
-            response.workers = workers;
+      }).then(results => {
+        if(results){
+            response.services = results;
+            results.map((result,i) => {
+                console.log("wid",result.wid);
+                Worker.findOne({
+                    where:{
+                        id:result.wid
+                    }
+                }).then(workersresult => {
+                    workers = workersresult;
+
+                });
+
+            });
+            response.workerresult = workers;
         }
       });
      
