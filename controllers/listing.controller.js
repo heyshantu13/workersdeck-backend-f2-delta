@@ -105,19 +105,6 @@ const showWorkersLists =  async (req,res) => {
       }).then(results => {
         if(results){
             response.services = results;
-            results.map((result,i) => {
-                console.log("wid",result.wid);
-                Worker.findOne({
-                    where:{
-                        id:result.wid
-                    }
-                }).then(workersresult => {
-                    workers = workersresult;
-
-                });
-
-            });
-            response.workerresult = workers;
         }
       });
      
