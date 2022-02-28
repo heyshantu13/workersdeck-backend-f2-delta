@@ -84,7 +84,11 @@ const showWorkersLists =  async (req,res) => {
     const {city,pincode,category_id} = req.query;
     const city_id = req.city_id;
     var subCategoriesData = null;
-    var response = {}, workers = {};
+    let response = {
+        subcategories: {},
+        services: {},
+        workers: {}
+    };
     await SubCategories.findAll({
         where: {
             category_id: category_id
