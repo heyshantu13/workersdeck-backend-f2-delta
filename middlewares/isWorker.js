@@ -10,7 +10,7 @@ const isWorker = (req,res,next) => {
         }
     }).then(user => {
         if(!user || user == null){
-            return res.status(404).send({status:false, message:"You are not worker!",data:null});
+            return res.status(200).send({status:false, message:"You are not worker!",data:null});
         }
         next();
     }).catch(err => {

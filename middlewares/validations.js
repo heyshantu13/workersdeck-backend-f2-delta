@@ -13,7 +13,7 @@ const City = db.City;
 const checkIfUserAddressIsValid = (req, res, next) =>{
 
     if(!req.body.address_id){
-        return res.status(406).send({
+        return res.status(200).send({
             status:false,
             message: "Invalid Address field",
             data: null
@@ -28,7 +28,7 @@ const checkIfUserAddressIsValid = (req, res, next) =>{
         if(addressResult){
             next();
         }else{
-            return res.status(404).send({
+            return res.status(200).send({
                 status:false,
                 message: "Incorrect Address",
                 data: null
@@ -49,7 +49,7 @@ const checkValidCity = (req,res,next) =>{
             req.city_id =  cityResult.id;
             next();
         }else{
-            return  res.status(404).send({
+            return  res.status(200).send({
                 status:false,
                 message:"City Not Found",
                 data:null

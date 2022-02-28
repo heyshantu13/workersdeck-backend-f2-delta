@@ -5,7 +5,7 @@ const Op = db.Sequelize.Op;
 const checkIfBookable = (req,res,next) => {
     const service_id = (req.body.service_id) ? (req.body.service_id):(req.query.service_id);
     if(!service_id){
-        return res.status(406).send({
+        return res.status(200).send({
             status:false,
             message: "Invalid Service field",
             data: null
@@ -20,7 +20,7 @@ const checkIfBookable = (req,res,next) => {
         if(serviceResult){
             next();
         }else{
-            return res.status(406).send({
+            return res.status(200).send({
                 status:false,
                 message: "Worker Not Accepting any booking!",
                 data:null,

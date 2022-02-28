@@ -21,7 +21,7 @@ module.exports = {
           status : 1,
         },
         {
-          name:'Bengalure',
+          name:'Bengaluru',
           status : 1,
         },
         {

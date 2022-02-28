@@ -15,7 +15,7 @@ const validateCity = (req,res,next) =>{
     id: city_id
   }).then(city =>{
     if(!city){
-       return  res.status(400).send({
+       return  res.status(200).send({
           status: false,
           message: "Invalid City!",
           data: null
@@ -32,7 +32,7 @@ const validateCategory = (req,res,next) =>{
     id: categoryid
   }).then(category =>{
     if(!category){
-       return  res.status(400).send({
+       return  res.status(200).send({
           status: false,
           message: "Invalid Category!",
           data: null
@@ -48,7 +48,7 @@ const validateSubCategory = (req,res,next) =>{
     id: subcategoryid
   }).then(subcategoryid =>{
     if(!subcategoryid){
-       return  res.status(400).send({
+       return  res.status(200).send({
           status: false,
           message: "Invalid Sub Category!",
           data: null
