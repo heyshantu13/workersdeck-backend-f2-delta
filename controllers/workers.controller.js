@@ -48,6 +48,7 @@ const signup = (req,res) => {
 const CreateService = async (req,res) => {
     const userId = req.userId;
     const WorkerId = await getWID.getWid(userId);
+
     Service.create({
         service_name: req.body.service_name,
         service_charge:req.body.service_charge,
