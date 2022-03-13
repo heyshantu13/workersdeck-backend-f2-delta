@@ -1,7 +1,4 @@
-const express = require('express');
-const { check, validationResult, body } = require('express-validator');
 const db = require("../models");
-const config = require("../config/auth.config");
 const User = db.users;
 const Worker = db.WorkersProfile;
 const City = db.City;
@@ -9,7 +6,6 @@ const Service =db.Service;
 const Categories = db.Categories;
 const SubCategories = db.SubCategories;
 const Review = db.Review;
-const Op = db.Sequelize.Op;
 
 const getCities = (req,res) => {
     City.findAll({
@@ -145,7 +141,13 @@ const getServiceDetails = async (req,res)=>{
             Worker.findOne({
                 where:{
                     id : serviceResult.wid,
-                }
+                },
+                include: [
+                    {
+                     attributes: { exclude: ['password','verification_key','role'] },
+                      model: User,
+                    },
+                  ],
             }).then(workerResult => {
                 Review.findAll({
                     where:{

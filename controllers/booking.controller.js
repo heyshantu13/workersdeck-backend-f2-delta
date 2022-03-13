@@ -1,5 +1,4 @@
 const db = require("../models");
-const config = require("../config/auth.config");
 var moment = require('moment');  
 const Op = db.Sequelize.Op;
 const getWID = require('../utils/getWID');

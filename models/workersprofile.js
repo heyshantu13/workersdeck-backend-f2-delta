@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.users,{foreignKey: 'uid'}); // This is to add a VehicleId attribute to Racer to hold the primary key value for Vehicle
     }
   };
   WorkersProfile.init({

@@ -4,7 +4,6 @@ const Booking = db.Booking;
 const Worker = db.WorkersProfile;
 const Service = db.Service;
 const User = db.users;
-var Sequelize,{ QueryTypes }  = require('sequelize');
 
 const saveAddress = (req,res) => {
     const userId = req.userId;
